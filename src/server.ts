@@ -15,7 +15,7 @@ const main = async () => {
   // create mongoose connection
   await connect(mongoDbUrl)
     .then(() => console.log("DB Connected"))
-    .catch((err) => {
+    .catch((err: Error) => {
       console.log(err);
     });
 
