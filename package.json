@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "npm run serve",
+    "start": "yarn run build && node dist/server.js",
     "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
-    "build": "tsc",
+    "build": "rimraf ./dist && tsc",
     "watch-ts": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
