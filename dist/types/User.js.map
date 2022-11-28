@@ -1,0 +1,1 @@
+{"version":3,"file":"User.js","sourceRoot":"/","sources":["types/User.ts"],"names":[],"mappings":"","sourcesContent":["export type User = {\n  name: string;\n  favouriteMissions: string[];\n};\n"]}

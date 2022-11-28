@@ -1,0 +1,41 @@
+{
+  "name": "graphql-spacex",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "build": "tsc",
+    "watch-ts": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript",
+    "GraphQL",
+    "NodeJS",
+    "JavaScript"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "types/express",
+    "@types/graphql-relay": "^0.7.0",
+    "@types/node": "^18.11.9",
+    "apollo-datasource-rest": "^3.7.0",
+    "cors": "^2.8.5",
+    "graphql-relay": "^0.10.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@typegoose/typegoose": "^9.12.1",
+    "@types/lodash": "^4.14.189",
+    "apollo-server-core": "^3.11.1",
+    "apollo-server-express": "^3.11.1",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "mongoose": "^6.7.2",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
+  }
+}

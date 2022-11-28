@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*", "dist/src/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "strict": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
+    "outDir": "dist",
+    "incremental": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "./src/generated"]
+}
