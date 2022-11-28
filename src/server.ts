@@ -11,6 +11,18 @@ const mongoDbUrl =
   process.env.MONGODB_URI ||
   "mongodb+srv://kovar95:Ml34SEGBEK4iGuZC@spacexcluster.67pvpam.mongodb.net/?retryWrites=true&w=majority";
 
+const isProduction = process.env.NODE_ENV === 'production';
+const apolloServerConfig = {
+  schema,
+  dataSources,
+  plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
+  introspection: true,
+};
+
+if (isProduction) {
+  apolloServerConfig.introspection = true;
+}
+
 const main = async () => {
   // create mongoose connection
   await connect(mongoDbUrl)
@@ -19,11 +31,8 @@ const main = async () => {
       console.log(err);
     });
 
-  const server = new ApolloServer({
-    schema,
-    dataSources,
-    plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
-  });
+
+  const server = new ApolloServer(apolloServerConfig);
 
   const app = express();
 
