@@ -1,1 +1,0 @@
-{"version":3,"file":"MissionDetails.js","sourceRoot":"/","sources":["services/spaceX/types/MissionDetails.ts"],"names":[],"mappings":"","sourcesContent":["export type MissionDetails = {\n  id: string;\n  flightNumber: number;\n  missionName: string;\n  launchDate: string;\n  iconUrl: string;\n  details: string;\n  launchSuccess: boolean;\n  photosLinks: string[];\n};\n"]}

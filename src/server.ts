@@ -7,9 +7,7 @@ import schema from "./schema";
 import cors from "cors";
 import { dataSources } from "./services/DataSources";
 
-const mongoDbUrl =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://kovar95:Ml34SEGBEK4iGuZC@spacexcluster.67pvpam.mongodb.net/?retryWrites=true&w=majority";
+const mongoDbUrl = process.env.MONGODB_URI;
 
 const isProduction = process.env.NODE_ENV === 'production';
 const apolloServerConfig = {
@@ -21,7 +19,7 @@ const apolloServerConfig = {
 
 const main = async () => {
   // create mongoose connection
-  await connect(mongoDbUrl)
+  await connect(mongoDbUrl as string)
     .then(() => console.log("DB Connected"))
     .catch((err: Error) => {
       console.log(err);
