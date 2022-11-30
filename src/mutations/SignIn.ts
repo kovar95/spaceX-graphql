@@ -14,7 +14,7 @@ export default {
       return existingUser;
     } else {
       const newUser = new User({
-        name,
+        name: userName,
         favouriteMissions: [],
       });
       return await newUser.save();

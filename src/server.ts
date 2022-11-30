@@ -16,12 +16,8 @@ const apolloServerConfig = {
   schema,
   dataSources,
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
-  introspection: true,
+  introspection: isProduction,
 };
-
-if (isProduction) {
-  apolloServerConfig.introspection = true;
-}
 
 const main = async () => {
   // create mongoose connection
